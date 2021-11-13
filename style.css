@@ -27,13 +27,13 @@ body {
   font-size: 30px;
   width: 50%;
   margin: 20px auto;
-  border: 1px solid #129f45;
+  border: 1px solid #129F45;
   border-radius: 5px;
   transition: all .4s linear;
 }
 
 .main__input:focus {
-  color: #e487;
+  color: #E487;
 }
 
 .main__button {

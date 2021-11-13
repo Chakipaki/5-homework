@@ -7,10 +7,8 @@ export function firstWeeDayMonth(date) {
     const monthsNotHight = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     const monthsHight = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     const dateArr = date.split('-');
-    console.log(dateArr);
     const year = Number(dateArr[0]);
     const month = Number(dateArr[1]);
-    const day = Number(dateArr[2]);
     const dateFormat = new Date(year, month - 1, 1);
     const firstMonthDay = getWeekDay(dateFormat);
     let days = monthsNotHight[month - 1];
@@ -21,6 +19,6 @@ export function firstWeeDayMonth(date) {
     return {
         firstWeekDay: firstMonthDay,
         amountOfDays: days,
-        month: month,
-    }
+        amountOfMonth: month,
+    };
 }

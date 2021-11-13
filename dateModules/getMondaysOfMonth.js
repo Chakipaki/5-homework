@@ -1,12 +1,12 @@
+// import
 import { firstWeeDayMonth } from './firstWeekDayMonth.js';
 
 export function getMondaysOfMonth(date) {
     const inputValue = firstWeeDayMonth(date);
-    const firstMonthDay = inputValue.firstWeekDay;
     const days = inputValue.amountOfDays;
     const arr = [];
     let x;
-    switch (firstMonthDay) {
+    switch (inputValue.firstWeekDay) {
         case 1:
             x = 1;
             while (days >= x) {
