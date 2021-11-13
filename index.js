@@ -16,41 +16,34 @@ const shortestWeekBtnResult = document.querySelector('[data-shortest-week-result
 const fullWeeksBtnResult = document.querySelector('[data-full-weeks-result]');
 
 inputDate.addEventListener('input', () => {
+    console.log('input');
     mondaysBtnResult.innerText = '';
+    mondaysBtnResult.style.display = 'none';
     isLongBtnResult.innerText = '';
+    isLongBtnResult.style.display = 'none';
     shortestWeekBtnResult.innerText = '';
+    shortestWeekBtnResult.style.display = 'none';
     fullWeeksBtnResult.innerText = '';
+    fullWeeksBtnResult.style.display = 'none';
 });
 
 mondaysBtn.addEventListener('click', () => {
     const result = getMondaysOfMonth(inputDate.value);
-    if (result === false) {
-        alert('Enter correct value');
-    }
     mondaysBtnResult.innerText = result;
     mondaysBtnResult.style.display = 'block';
 });
 isLongBtn.addEventListener('click', () => {
     const result = isMonthLong(inputDate.value);
-    if (result === Error) {
-        alert('Enter correct value');
-    }
     isLongBtnResult.innerText = result;
     isLongBtnResult.style.display = 'block';
 });
 shortestWeekBtn.addEventListener('click', () => {
     const result = shortestWeekDaysNumber(inputDate.value);
-    if (result === false) {
-        alert('Enter correct value');
-    }
     shortestWeekBtnResult.innerText = result;
     shortestWeekBtnResult.style.display = 'block';
 });
 fullWeeksBtn.addEventListener('click', () => {
     const result = fullWeeksNumberInMonth(inputDate.value);
-    if (result === false) {
-        alert('Enter correct value');
-    }
     fullWeeksBtnResult.innerText = result;
     fullWeeksBtnResult.style.display = 'block';
 });
